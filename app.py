@@ -11,6 +11,8 @@ import json
 import sys
 import logging
 from flask_cors import CORS
+from waitress import serve
+
 
 # Configure g4f
 g4f.debug.logging = True  # Enable verbose logging
@@ -134,6 +136,5 @@ def predict():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    
-    app.run(host='0.0.0.0', port=5000, debug=False)  # Debugger disabled
+    serve(app, host="0.0.0.0", port=5000, threads=4)
 
