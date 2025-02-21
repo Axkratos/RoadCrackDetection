@@ -24,4 +24,4 @@ COPY . .
 EXPOSE 5000
 
 # Run the application using Waitress
-CMD ["python", "-m", "waitress", "--listen=0.0.0.0:5000", "app:app"]
+CMD ["python", "-m", "waitress", "--listen=0.0.0.0:5000", "--call=app:create_app", "--threads=4", "--timeout=300"]
