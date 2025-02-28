@@ -1,0 +1,5 @@
+{
+    "cmake.useCMakePresets": "auto",
+    "cmake.sourceDirectory": "D:/Drive-D/VS Code Program/Flutter/flutter_catalog/windows",
+    "java.compile.nullAnalysis.mode": "automatic"
+}
